@@ -22,7 +22,7 @@ double pop(void){
         return (position);
     } else {
         number = stack[position];
-        (void) printf("Poped element is = %.4lf \n", &number);
+        (void) printf("Poped element is = %.4lf \n", stack[position]);
         position -= 1;
     }
     return (number);
@@ -69,7 +69,11 @@ void main (){
                 printStack();
                 break;
             case 4:
+                (void) printf("Goodbye!");
                 return;
+
+            default:
+                printStack();
         }
         fflush(stdin);
         (void) printf("Would you like to continue? [0/1]?\n");
