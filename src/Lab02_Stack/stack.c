@@ -19,13 +19,13 @@ double pop(void){
     double number;
     if(position == -1){
         (void) printf("Stack is Empty\n");
-        return position;
+        return (position);
     } else {
         number = stack[position];
-        (void) printf("Poped element is = %lf \n", &number);
+        (void) printf("Poped element is = %.4lf \n", &number);
         position -= 1;
     }
-    return number;
+    return (number);
 }
 
 void printStack(void){
@@ -36,7 +36,7 @@ void printStack(void){
     } else {
         (void) printf("\n Your stack has a status of: \n");
         for( i = position; i >= 0; i--){
-            (void) printf("%lf \n", stack[i]);
+            (void) printf("%.4lf \n", stack[i]);
         }
     }
     (void) printf("\n");
