@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "stackHeader.h"
 
+// Function to push an element onto the stack
 void push(void){
     double number;
     if(position == (STACK_LENGTH - 1)){
@@ -15,6 +16,7 @@ void push(void){
     return;
 }
 
+// Function to pop the top element of the stack
 double pop(void){
     double number;
     if(position == -1){
@@ -28,6 +30,7 @@ double pop(void){
     return (number);
 }
 
+// Function to print the momentary stack out
 void printStack(void){
     int i;
     if(position == -1){
