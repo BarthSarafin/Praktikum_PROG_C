@@ -10,31 +10,28 @@ void print(void* source, int numElements, char type){
     switch(type){
         case CHAR: {
             for (i = 0; i < numElements; i++) {
-                printf("%c from %d Elements\n", *(char *) (source+i), numElements); // Alternative zu (char*)source)[i]
+                (void)printf("%c from %d Elements\n", *(char *) (source+i), numElements); // Alternative zu (char*)source)[i]
             }
             break;
         }
         case INT: {
-
             for (i = 0; i < numElements; i++) {
-                printf("%d from %d Elements\n",((int *)source)[i], numElements);
+                (void)printf("%d from %d Elements\n",((int *)source)[i], numElements);
             }
             break;
         }
         case FLOAT: {
             for (i = 0; i < numElements; i++) {
-                printf("%.2f from %d Elements\n", ((float *) source)[i], numElements);
+                (void)printf("%.2f from %d Elements\n", ((float *) source)[i], numElements);
             }
             break;
         }
         case STRING: {
-
-                printf("%s with %d Elements\n", (char *) source, numElements);
-
+            (void)printf("%s with %d Elements\n", (char *) source, numElements);
             break;
         }
         default:
-            printf("Error. Please try again. The silence will fall.");
+            (void)printf("Error. Please try again. The silence will fall.");
     }
 }
 
