@@ -16,4 +16,4 @@ typedef struct {
     u32 gateway;
 } routingTable;
 
-int printRoutingTable(const unsigned entry_cnt, routingTable rt[]);
+int printRoutingTable(const unsigned entryCount, routingTable rt[]);

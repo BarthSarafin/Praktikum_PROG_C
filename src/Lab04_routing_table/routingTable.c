@@ -14,16 +14,16 @@ routingTable rt[] = {
 };
 
 int main(void) {
-    const unsigned entry_cnt = sizeof(rt) / sizeof(routingTable);
-    (void) printRoutingTable(entry_cnt, rt);
+    const unsigned entryCount = sizeof(rt) / sizeof(routingTable);
+    (void) printRoutingTable(entryCount, rt);
     return EXIT_SUCCESS;
 }
 
-int printRoutingTable(const unsigned entry_cnt, routingTable rt[]) {
+int printRoutingTable(const unsigned entryCount, routingTable rt[]) {
     int i;
     printf("Netadress\t   Gateway \t\tPort     Netmask\n");
     printf("----------------------------------------------------------------------------\n");
-    for(i=0; i<entry_cnt; i++) {
+    for(i=0; i < entryCount; i++) {
         (void) printf("%u.%u.%u.%u \t-> %u.%u.%u.%u \t\t %u\t %u.%u.%u.%u\n", _IPA(rt[i].netAddress),
                       _IPA(rt[i].gateway), rt[i].port, _IPA(rt[i].netMask));
     }
