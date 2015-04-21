@@ -2,7 +2,7 @@
 // Created by BarthSarafin on 20.04.2015.
 //
 
-int isPalindrome(char*);
+char* isPalindrome(char*);
 void copyString(char*,char*);
 void reverseString(char*);
 int stringLength(char*);

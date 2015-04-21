@@ -8,22 +8,34 @@
 
 int main(){
     char string[100];
-    int result;
+    char* result;
+    int option = 1;
 
-    printf("Please enter a String:\n");
-    gets(string);
+    (void) printf("#################################\n");
+    (void) printf("#       PROG C                  #\n");
+    (void) printf("#       bachmste                #\n");
+    (void) printf("#       Palindrom               #\n");
+    (void) printf("#################################\n\n");
 
-    result = isPalindrome(string);
+    while(option) {
+        (void) printf("Please enter a String:\n");
+        gets(string);
 
-    if(result == 1){
-        printf("\"%s\" is a palindrome string.\n", string);
-    } else {
-        printf("\"%s\" is not a palindrome string.\n", string);
+        result = isPalindrome(string);
+
+        if (result == 0) {
+            printf("\"%s\" is not a palindrome string.\n", string);
+        } else {
+            printf("\"%s\" is a palindrome string.\n", string);
+        }
+
+        (void) printf("Would you like to continue? [0/1]?\n");
+        (void) scanf("%d", &option);
+        fflush(stdin);
     }
-    return 0;
 }
 
-int isPalindrome(char *string){
+char* isPalindrome(char *string){
     int check, length;
     char *reverse;
 
@@ -38,7 +50,7 @@ int isPalindrome(char *string){
     free(reverse);
 
     if(check == 0){
-        return 1;
+        return string;
     } else {
         return 0;
     }
