@@ -16,4 +16,11 @@ typedef struct {
     u32 gateway;
 } routingTable;
 
+routingTable rt[] = {
+        {IPA(160, 85, 18, 0), IPA(255, 255, 255, 240), 1, Direct},
+        {IPA(160, 85, 19, 0), IPA(255, 255, 255, 0), 2, Direct},
+        {IPA(160, 85, 16, 0), IPA(255, 255, 254, 0), 0, Direct},
+        {Default, Default, 0, IPA(160, 85, 16, 1)}
+};
+
 int printRoutingTable(const unsigned entryCount, routingTable rt[]);
